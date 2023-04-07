@@ -1,0 +1,14 @@
+
+<h1 class="alet alert-info p-3 text-center">
+     Passengers Airline
+</h1>
+
+<app-passengers-count [count]="checkedCount" [ArrayLength]="passengerArray.length"></app-passengers-count>
+
+<p *ngFor="let arr of passengerArray">
+    {{arr.fullname}}
+</p>
+
+<app-passengers-details *ngFor="let arrobj of passengerArray" [getObjectOneByOne]="arrobj" 
+    (emiteObjId)="getId($event)"
+></app-passengers-details>
